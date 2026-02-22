@@ -4,9 +4,13 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "bankData" / "bank.csv"
 
 # load data
-df = pd.read_csv("../bankData/bank.csv", header=None)
+df = pd.read_csv(DATA_PATH, header=None)
 
 # remove campaign columns. No header, so index
 df.drop(df.iloc[:, 8:16], inplace=True, axis=1)

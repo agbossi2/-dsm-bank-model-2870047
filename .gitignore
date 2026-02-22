@@ -3,5 +3,5 @@ node_modules
 .tmp
 npm-debug.log
 venv/*
-application/__pycache__/__init__.cpython-38.pyc
+*/__pycache__/*
 .vscode/launch.json
